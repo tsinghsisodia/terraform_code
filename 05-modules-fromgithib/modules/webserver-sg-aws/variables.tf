@@ -32,10 +32,14 @@ variable "ami" {
 }
 
 variable "azs" {
-  default = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+  default = ["ap-south-1a", "ap-south-1b"]
 }
 
 variable "environment" {
 description= "type of environment , prod or stg or dev "
-default="stg"
+default="stag"
+}
+
+variable "vpc_id" {
+description = "provide vpc_id"
 }
