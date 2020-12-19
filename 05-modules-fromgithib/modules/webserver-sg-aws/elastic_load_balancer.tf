@@ -1,5 +1,5 @@
 resource "aws_elb" "my-first-elb" {
-  name               = "terraform-elb"
+  name               = "${var.cluster}-terraform-elb-${var.environment}"
   availability_zones = var.azs
   security_groups    = [aws_security_group.elb_sg.id]
   listener {
